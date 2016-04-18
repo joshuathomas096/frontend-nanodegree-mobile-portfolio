@@ -1,3 +1,9 @@
+Welcome to my WebOp Project! 
+
+Here is how you open the application. Download the zip file. Decompress it. And then open index.html or pizza.html in the browser of your choice. Enjoy! 
+
+I have made changes in order to improve Page Speed on index.html as well as the FPS to 60 but limiting the number of pizzas that are rendered on the pizza.html page.
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
