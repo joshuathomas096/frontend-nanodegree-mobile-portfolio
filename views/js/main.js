@@ -420,7 +420,7 @@ var resizePizzas = function(size) {
    // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
   function determineDx (elem, size) {
     var oldWidth = elem.offsetWidth;
-    var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
+    var windowWidth = document.getElementById("#randomPizzas").offsetWidth;
     var oldSize = oldWidth / windowWidth;
 
     // Optional TODO: change to 3 sizes? no more xl?
@@ -446,8 +446,9 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.getElementsByClassName(".randomPizzaContainer")[i], size);
+    for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
+      var dx;
+      dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     }
@@ -499,9 +500,12 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
 /* is there a faster way to access the DOM */
-  var items = document.querySelectorAll('.mover');
+  var items;
+  items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase;
+    var part1 = (document.body.scrollTop / 1250);
+    phase = Math.sin(part1 + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
