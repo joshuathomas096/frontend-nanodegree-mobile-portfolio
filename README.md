@@ -5,6 +5,9 @@ Here is how you use the repo:
 	- Decompress it
 	- open index.html or pizza.html in the browser of your choice
 Enjoy!
+Please check my pagespeed at this link!!!! : 
+
+http://joshuathomas096.github.io/frontend-nanodegree-mobile-portfolio
 
 I have made changes to this project in order to improve Page speed on index.html as well as the FPS on pizza.html to 60FPS. I improved the FPS by limiting the number of pizza's rendered on the page.
 
