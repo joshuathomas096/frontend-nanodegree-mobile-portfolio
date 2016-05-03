@@ -11,4 +11,8 @@ function logCRP() {
 
 window.addEventListener("load", function(event) {
   logCRP();
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> gh-pages

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Welcome to my WebOptimization Project! 
 
 Here is how you use the repo:
@@ -10,6 +11,13 @@ Please check my pagespeed at this link!!!! :
 http://joshuathomas096.github.io/frontend-nanodegree-mobile-portfolio
 
 I have made changes to this project in order to improve Page speed on index.html as well as the FPS on pizza.html to 60FPS. I improved the FPS by limiting the number of pizza's rendered on the page.
+=======
+Welcome to my WebOp Project! 
+
+Here is how you open the application. Download the zip file. Decompress it. And then open index.html or pizza.html in the browser of your choice. Enjoy! 
+
+I have made changes in order to improve Page Speed on index.html as well as the FPS to 60 but limiting the number of pizzas that are rendered on the pizza.html page.
+>>>>>>> gh-pages
 
 ## Website Performance Optimization portfolio project
 
