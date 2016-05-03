@@ -414,7 +414,6 @@ var resizePizzas = function(size) {
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-<<<<<<< HEAD
         document.getElementById("pizzaSize").innerHTML = "Small";
         return;
       case "2":
@@ -422,15 +421,6 @@ var resizePizzas = function(size) {
         return;
       case "3":
         document.getElementById("pizzaSize").innerHTML = "Large";
-=======
-        document.querySelector("#pizzaSize").innerHTML = "Small";
-        return;
-      case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
-        return;
-      case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
->>>>>>> gh-pages
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -442,11 +432,7 @@ var resizePizzas = function(size) {
    // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
   function determineDx (elem, size) {
     var oldWidth = elem.offsetWidth;
-<<<<<<< HEAD
     var windowWidth = document.getElementById("randomPizzas").offsetWidth;
-=======
-    var windowWidth = document.getElementById("#randomPizzas").offsetWidth;
->>>>>>> gh-pages
     var oldSize = oldWidth / windowWidth;
 
     // Optional TODO: change to 3 sizes? no more xl?
@@ -472,19 +458,13 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-<<<<<<< HEAD
-    var container = document.getElementByClassName('randomPizzaContainer');
-    var dx = determineDx(container[0], size);
-    var newwidth = (container[0].offsetWidth + dx) + 'px';
-    for (var i = 0, len = container.length; i < len; i++) {
-         container[i].style.width = newwidth;
-=======
+
     for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
       var dx;
       dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
->>>>>>> gh-pages
+
     }
   }
 
@@ -533,20 +513,12 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-<<<<<<< HEAD
-  var items = document.getElementsByClassName('mover');
-  for (var i = 0; i < items.length; i++) {
-    var phase;
-    phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-=======
-/* is there a faster way to access the DOM */
   var items;
   items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
     var phase;
     var part1 = (document.body.scrollTop / 1250);
     phase = Math.sin(part1 + (i % 5));
->>>>>>> gh-pages
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -567,29 +539,19 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-<<<<<<< HEAD
   var elem;
   var movingPizzas = document.getElementById('movingPizzas1');
   for (var i = 0; i < 24; i++) {
     elem = document.createElement('img');
-=======
-  for (var i = 0; i < 24; i++) {
-    var elem = document.createElement('img');
->>>>>>> gh-pages
+
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-<<<<<<< HEAD
     movingPizzas.appendChild(elem);
   }
   updatePositions();
 });
-=======
-    document.querySelector("#movingPizzas1").appendChild(elem);
-  }
-  updatePositions();
-});
->>>>>>> gh-pages
+
